@@ -1,0 +1,213 @@
+html {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    background: #333;
+    color: #eee;
+    width: 100%;
+    height: 100%;
+}
+
+.products-view {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.pinned-products-wrap {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-browser-wrap {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    border-radius: 3px;
+    overflow: hidden;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 54px;
+    padding: 0 16px;
+    background: #fc3;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.card-title h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.product-browser .card-title h2 {
+    width: 19%;
+}
+
+.card-title input[type="text"] {
+    -webkit-appearance: none;
+    border: none;
+    background: #fff;
+    font-size: 1em;
+    padding: 8px;
+    border-radius: 3px;
+    width: 37.5%;
+}
+
+.card-title select {
+    border: none;
+    height: 32px;
+    background-color: #fff;
+    font-size: 1em;
+    padding: 8px;
+    width: 37%;
+    margin-right: 16px;
+}
+
+.pinned-products {
+    margin: 90px 16px 90px 32px;
+    background: #777;
+    flex: 1;
+}
+
+.product-list {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+}
+
+.product-browser {
+    margin: 90px 32px 90px 16px;
+    flex: 1;
+    background: #777;
+}
+
+.product-browser ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 16px 0 0 16px;
+}
+
+.product-browser ul li {
+    display: block;
+    width: 20%;
+    font-size: 0.8em;
+}
+
+.product-browser ul li img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.pinned-products ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 16px 0 0 16px;
+}
+
+.pinned-products ul li {
+    display: block;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+.pinned-products ul li img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.pinned-products .product {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background: #fff;
+    padding: 20px 16px;
+    border-radius: 3px;
+}
+
+.pinned-products .product-wrap {
+    margin-bottom: 16px;
+    margin-right: 16px;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.pinned-products .product-name {
+    display: block;
+    width: 80%;
+}
+
+.pinned-products .product-price {
+    display: block;
+    align-self: center;
+    margin-left: auto;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.product-browser .product-wrap {
+    position: relative;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.product-wrap:hover {
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.product-browser .product {
+    display: block;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.product:hover {
+    cursor: pointer;
+}
+
+.product-browser .product .product-name {
+    font-size: 1.3em;
+    word-wrap: break-word;
+}
+
+.product-browser .product .product-price {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    font-size: 1.9em;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+}
+
+.product-price:after {
+    content: "\20AC";
+    margin-left: 5px;
+}
