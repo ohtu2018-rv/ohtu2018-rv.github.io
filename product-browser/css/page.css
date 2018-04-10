@@ -44,7 +44,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: 54px;
+    height: 72px;
     padding: 0 16px;
     background: #fc3;
     color: rgba(0, 0, 0, 0.8);
@@ -53,6 +53,7 @@ body {
 .card-title h2 {
     padding: 0;
     margin: 0;
+    font-size: 1.2em;
 }
 
 .product-browser .card-title h2 {
@@ -64,24 +65,29 @@ body {
     border: none;
     background: #fff;
     font-size: 1em;
+    height: 45px;
     padding: 8px;
     border-radius: 3px;
-    width: 37.5%;
+    box-sizing: border-box;
+    width: 47%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .card-title select {
     border: none;
     border-radius: 3px;
-    height: 34px;
+    height: 45px;
     background-color: #fff;
     font-size: 1em;
     padding: 8px;
-    width: 37%;
     margin-right: 16px;
+    box-sizing: border-box;
+    width: 47%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .pinned-products {
-    margin: 90px 16px 90px 32px;
+    margin: 110px 16px 110px 32px;
     background: #777;
     flex: 1;
 }
@@ -93,7 +99,7 @@ body {
 }
 
 .product-browser {
-    margin: 90px 32px 90px 16px;
+    margin: 110px 32px 110px 16px;
     flex: 1;
     background: #777;
 }
@@ -139,10 +145,14 @@ body {
 .pinned-products .product {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    width: 100%;
+    border: none;
+    -webkit-appearance: none;
     background: #fff;
-    padding: 20px 16px;
+    padding: 26px 16px;
     border-radius: 3px;
+    font-size: 1em;
 }
 
 .pinned-products .product-wrap {
@@ -165,20 +175,30 @@ body {
 }
 
 .product-browser .product-wrap {
+    border: none;
     position: relative;
     margin-right: 16px;
     margin-bottom: 16px;
-    transition: box-shadow 0.2s ease-in-out;
+    box-sizing: border-box;
 }
 
-.product-wrap:hover {
-    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+.product {
+    transition: transform 0.1s ease-in-out, box-shadow 0.2s ease;
+    outline: none;
+    text-align: left;
+}
+
+.product:active {
+    transform: scale(0.95);
+    border: none;
 }
 
 .product-browser .product {
     display: block;
     background: #fff;
     position: absolute;
+    border: none;
+    -webkit-appearance: none;
     top: 0;
     left: 0;
     width: 100%;
@@ -191,11 +211,16 @@ body {
 
 .product:hover {
     cursor: pointer;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
 }
 
 .product-browser .product .product-name {
-    font-size: 1.3em;
+    font-size: 1.2em;
     word-wrap: break-word;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    margin-right: 16px;
 }
 
 .product-browser .product .product-price {
