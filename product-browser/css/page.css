@@ -71,7 +71,8 @@ body {
 
 .card-title select {
     border: none;
-    height: 32px;
+    border-radius: 3px;
+    height: 34px;
     background-color: #fff;
     font-size: 1em;
     padding: 8px;
